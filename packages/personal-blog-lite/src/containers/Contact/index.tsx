@@ -40,17 +40,16 @@ const Contact: React.SFC<{}> = () => {
         values: MyFormValues,
         actions: FormikActions<MyFormValues>
       ) => {
-        actions.setSubmitting(false)
         fetch("/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: encode({
             "form-name": values,
-            ...values,
           }),
         })
-          .then(() => navigate("/"))
+          .then(() => alert("success!!"))
           .catch(error => alert(error))
+        actions.setSubmitting(false)
       }}
       validationSchema={SignupSchema}
       render={({
@@ -69,13 +68,9 @@ const Contact: React.SFC<{}> = () => {
             data-netlify-honeypot="bot-field"
             action="/thanks/"
           >
+            {/* You still need to add the hidden input with the form name to your JSX form */}
             <input type="hidden" name="form-name" value="contact" />
-            <p hidden>
-              <label>
-                Don’t fill this out:
-                <input name="bot-field" onChange={handleChange} />
-              </label>
-            </p>
+
             <ContactWrapper>
               <ContactPageTitle>
                 <h2>Contact</h2>
