@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css?family=Nanum+Pen+Script&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Fira+Code&display=swap");
+
+.gatsby-highlight-code-line {
+  background-color: dimgray;
+  display: block;
+}
+pre[class*="language-"],
+code[class*="language-"] {
+  margin: 20px;
+  font-family: "Fira Code", monospace;
+  font-size: 15px;
+}
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: #272822;
+}

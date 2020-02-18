@@ -10,7 +10,8 @@ const colors = {
   borderColor: "#DBDBDB", // 8
   lightBorderColor: "#ededed", //9
   primary: "#D10068", // 10
-  primaryHover: "#D10068", // 11
+  primaryHover: "#D10068", // 11,
+  babyPink: "#f73b98",
 }
 
 export default colors

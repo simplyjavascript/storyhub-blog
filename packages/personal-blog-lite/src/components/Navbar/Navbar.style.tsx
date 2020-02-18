@@ -12,7 +12,7 @@ export const NavbarWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 30px 75px;
-  background-color: #fff;
+  /*background-color: #fff;*/
   transition: 0.25s ease-in-out;
   @media (max-width: 1400px) {
     padding: 25px 45px;
@@ -26,6 +26,11 @@ export const NavbarWrapper = styled.div`
 `
 
 export const Logo = styled.div`
+  font-family: "Nanum Pen Script", cursive;
+  font-weight: 500;
+  padding: 0;
+  font-size: 28px;
+  letter-spacing: 3px;
   margin-right: 50px;
   flex-shrink: 0;
   @media (max-width: 990px) {
@@ -38,6 +43,9 @@ export const Logo = styled.div`
     display: block;
     max-width: 100%;
     height: auto;
+  }
+  a {
+    color: #000;
   }
 `
 
@@ -64,15 +72,44 @@ export const MenuItem = styled.li`
     font-size: ${themeGet("fontSizes.3", "15")}px;
     line-height: ${themeGet("lineHeights.normal", "1")};
     font-weight: ${themeGet("fontWeights.3", "400")};
-    color: ${themeGet("colors.lightTextColor", "#757575")};
-    transition: 0.15s ease-in-out;
+    color: ${themeGet("colors.black", "#757575")};
+    transition: color 0.3s;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    letter-spacing: 1px;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+
+    &:before {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      color: transparent;
+      content: "•";
+      text-shadow: 0 0 transparent;
+      font-size: 1.2em;
+      transition: text-shadow 0.3s, color 0.3s;
+      transform: translateX(-50%);
+      pointer-events: none;
+    }
 
     &:hover {
       color: ${themeGet("colors.textColor", "#292929")};
     }
+    &:hover::before,
+    &:focus::before {
+      color: ${themeGet("colors.babyPink", "#292929")};
+      text-shadow: 10px 0 ${themeGet("colors.babyPink", "#292929")},
+        -10px 0 ${themeGet("colors.babyPink", "#292929")};
+    }
+    &:hover,
+    &:focus {
+      color: ${themeGet("colors.babyPink", "#292929")}
+    }
     &.active-link {
-      color: ${themeGet("colors.textColor", "#292929")};
+      color: ${themeGet("colors.babyPink", "#292929")};
       font-weight: ${themeGet("fontWeights.4", "500")};
+      /*border-bottom: 4px solid ${themeGet("colors.babyPink", "#292929")};*/
     }
   }
 `

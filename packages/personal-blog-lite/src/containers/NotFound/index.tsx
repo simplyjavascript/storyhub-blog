@@ -34,17 +34,18 @@ const NotFound: React.FunctionComponent<NotFoundProps> = props => {
   return (
     <NotFoundWrapper>
       <NotFoundContent>
-        <h1>This Page Was Lost</h1>
+        <h1>Oops! Its on me</h1>
         <p>
-          The Page You are looking for isn’t available. Try to search again or
-          use the Go Back button below.
+          A missing semi colon or a closing tag ? A copy pasing error ?...
+          Alright, let's try once again. Lemme take you back to Home page
         </p>
+
         <Goback>
           <Link to="/">
             <Icon>
               <IoMdArrowRoundBack />
             </Icon>
-            Go Back
+            Go Home
           </Link>
         </Goback>
       </NotFoundContent>

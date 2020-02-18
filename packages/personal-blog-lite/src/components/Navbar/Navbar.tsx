@@ -26,17 +26,17 @@ const MenuItems = [
     url: "/",
   },
   {
-    label: "About",
-    url: "/about",
+    label: "Trainings",
+    url: "/training",
   },
   {
     label: "Contact",
     url: "/contact",
   },
-  {
-    label: "404 Page",
-    url: "/404",
-  },
+  // {
+  //   label: "404 Page",
+  //   url: "/404",
+  // },
 ]
 
 const Navbar: React.FunctionComponent<NavbarProps> = ({
@@ -71,7 +71,8 @@ const Navbar: React.FunctionComponent<NavbarProps> = ({
         </DrawerProvider>
         <Logo>
           <Link to="/">
-            <img src={LogoImage} alt="logo" />
+            {/* <img src={LogoImage} alt="logo" /> */}
+            {"<simply-js/>"}
           </Link>
         </Logo>
         <MenuWrapper>

@@ -9,7 +9,7 @@ export const IntroWrapper = styled.div`
   display: flex;
   align-items: center;
   @media (max-width: 1400px) {
-    padding: 120px 10px 120px 10px;
+    padding: 40px 10px 40px 10px;
   }
   @media (max-width: 1200px) {
     padding: 100px 10px 100px 10px;
@@ -25,11 +25,11 @@ export const IntroWrapper = styled.div`
 `
 
 export const IntroImage = styled.div`
-  width: 270px;
-  height: 270px;
-  padding: 30px;
+  width: 130px;
+  height: 130px;
+  padding: 10px;
   border-radius: 50%;
-  margin: 0 auto;
+  margin-right: 20px;
   border: 1px solid ${themeGet("colors.lightBorderColor", "#ededed")};
   flex-shrink: 0;
   @media (max-width: 990px) {
@@ -64,6 +64,7 @@ export const IntroTitle = styled.h1`
   font-family: ${themeGet("fontFamily.1", "'Poppins', sans-serif")};
   color: ${themeGet("colors.textColor", "#292929")};
   margin-bottom: 20px;
+  text-align: center;
   @media (max-width: 990px) {
     font-size: 26px;
     margin-bottom: 15px;

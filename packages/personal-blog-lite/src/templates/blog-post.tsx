@@ -59,7 +59,7 @@ const BlogPostTemplate = (props: any) => {
               : post.frontmatter.cover.childImageSharp.fluid
           }
           description={post.html}
-          imagePosition="left"
+          imagePosition="top"
         />
 
         <BlogPostFooter

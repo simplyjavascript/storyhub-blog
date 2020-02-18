@@ -57,6 +57,12 @@ const ResetCSS = createGlobalStyle`
     font-size: 15px;
     overflow-x: hidden;
     -webkit-tap-highlight-color: transparent;
+    background-image: url("./Vorderrhein.svg");
+    background-repeat: no-repeat;
+    background-size: 65%;
+    background-position: right 0;
+    width: 100%;
+    
   }
 
   p{
@@ -83,10 +89,6 @@ const ResetCSS = createGlobalStyle`
   blockquote{
     font-family: 'Poppins',sans-serif;
     font-weight: 500;
-  }
-
-  :not(pre) > code[class*="language-"], pre[class*="language-"] {
-    background: #f5f5f5;
   }
 
   pre[class*="language-"] {
@@ -127,6 +129,7 @@ const ResetCSS = createGlobalStyle`
   .nav-sticky{
     .header {
       box-shadow: 0 0 15px rgba(0,0,0,.08);
+      background-color: #fff;
       .navbar{
         @media (min-width: 1400px) {
           padding-top: 25px;

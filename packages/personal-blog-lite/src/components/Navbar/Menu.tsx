@@ -31,9 +31,15 @@ const Menu: React.FunctionComponent<MenuProps> = ({
       {items.map((item, index) => (
         <MenuItem key={index}>
           {item.external ? (
-            <a href={item.url}>{item.label}</a>
+            <a data-hover={item.label} href={item.url}>
+              {item.label}
+            </a>
           ) : (
-            <Link to={item.url} activeClassName="active-link">
+            <Link
+              data-hover={item.label}
+              to={item.url}
+              activeClassName="active-link"
+            >
               {item.label}
             </Link>
           )}

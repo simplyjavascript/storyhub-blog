@@ -56,16 +56,7 @@ const PostDetails: React.FunctionComponent<PostDetailsProps> = ({
         ""
       )}
 
-      {imagePosition == "top" ? (
-        <>
-          <PostTitle>{title}</PostTitle>
-          <PostDate>{date}</PostDate>
-        </>
-      ) : (
-        ""
-      )}
-
-      {imagePosition == "top" ? (
+      {/* {imagePosition == "top" ? (
         <>
           {preview == null ? null : (
             <PostPreview className="post_preview">
@@ -75,8 +66,16 @@ const PostDetails: React.FunctionComponent<PostDetailsProps> = ({
         </>
       ) : (
         ""
-      )}
+      )} */}
       <PostDescriptionWrapper className="post_des_wrapper">
+        {imagePosition == "top" ? (
+          <>
+            <PostTitle>{title}</PostTitle>
+            <PostDate>{date}</PostDate>
+          </>
+        ) : (
+          ""
+        )}
         {imagePosition == "left" ? (
           <>
             <PostTitle>{title}</PostTitle>

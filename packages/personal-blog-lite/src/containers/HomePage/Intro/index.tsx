@@ -11,10 +11,12 @@ import {
 } from "./style"
 import {
   // IoLogoFacebook,
-  IoLogoTwitter,
+  // IoLogoTwitter,
   IoLogoInstagram,
   IoLogoGithub,
 } from "react-icons/io"
+import TerminalCard from "../../../components/TerminalCard/TerminalCard"
+// import TerminalStyledWrapper from "../../../components/TerminalCard/TerminalCardStyled"
 
 type IntroProps = {}
 
@@ -50,19 +52,19 @@ const Intro: React.FunctionComponent<IntroProps> = () => {
     }
   `)
 
-  const { author, about } = Data.site.siteMetadata
-  const AuthorImage = Data.avatar.childImageSharp.fluid
+  // const { author, about } = Data.site.siteMetadata
+  // const AuthorImage = Data.avatar.childImageSharp.fluid
 
   return (
     <IntroWrapper>
-      <IntroImage>
-        <Image fluid={AuthorImage} alt="author" />
-      </IntroImage>
       <IntroInfo>
         <IntroTitle>
-          Hey! I’m <b>{author}</b>
+          Hey there ! <b> I’m </b>
         </IntroTitle>
-        <Desciption>{about}</Desciption>
+
+        <TerminalCard />
+
+        {/* <Desciption>{about}</Desciption> */}
         <SocialProfile items={SocialLinks} />
       </IntroInfo>
     </IntroWrapper>
